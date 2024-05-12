@@ -15,7 +15,6 @@ const NavOptios = ({ miPhones, redmiPhones, tv, laptop, fitnessAndLifeStyle, hom
     let location = useLocation();
 
     useEffect(() => {
-
         if (location.pathname === "/miphones") {
             return setMiPhoneToggle(true)
         }
@@ -37,7 +36,6 @@ const NavOptios = ({ miPhones, redmiPhones, tv, laptop, fitnessAndLifeStyle, hom
         if (location.pathname === "/audio") {
             return setAudioToggle(true)
         }
-
         if (location.pathname === "/accessories") {
             return setAccessoriesToggle(true)
         }
@@ -45,18 +43,13 @@ const NavOptios = ({ miPhones, redmiPhones, tv, laptop, fitnessAndLifeStyle, hom
 
     return (
         <div className="navOptions">
-
             {miPhoneToggle ? miPhones.map((item) => (
                 < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-
-
             {redmiPhoneToggle ? redmiPhones.map((item) => (
 
                 < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-
-
             {tvToggle ? tv.map((item) => (
 
                 < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
