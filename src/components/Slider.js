@@ -6,10 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Slider = ({start}) => {
     return (
         <Carousel fade>
-       
-
-       {start.map((item)=>(
-            <Carousel.Item>
+        {start.map((item)=>(
+            <Carousel.Item key={item}>
             <img
               className="d-block w-100"
               src={item}

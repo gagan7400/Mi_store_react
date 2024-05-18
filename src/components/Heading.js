@@ -7,7 +7,6 @@ const Heading = ({text}) => {
             <div></div>
             <p>{text}</p>
             <div></div>
-            
         </div>
     )
 }
